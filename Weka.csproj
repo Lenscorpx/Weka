@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A812DFB-58D4-46F2-B15F-6423A617FA01}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Weka</RootNamespace>
+    <AssemblyName>Weka</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>D:\Data Center\Projects Datas\CodeLabs\Mes Frameworks\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts">
+      <HintPath>D:\Data Center\Projects Datas\CodeLabs\Mes Frameworks\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms">
+      <HintPath>D:\Data Center\Projects Datas\CodeLabs\Mes Frameworks\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>D:\Data Center\Projects Datas\CodeLabs\Mes Frameworks\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>D:\Data Center\Projects Datas\CodeLabs\Mes Frameworks\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tulpep.NotificationWindow">
+      <HintPath>D:\Data Center\Projects Datas\CodeLabs\Mes Frameworks\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code_Library\Cls_entreprise.cs" />
+    <Compile Include="Code_Library\Cls_level_user.cs" />
+    <Compile Include="Code_Library\Cls_noms.cs" />
+    <Compile Include="Code_Library\Cls_user_id.cs" />
+    <Compile Include="Code_Library\Data_Repository.cs" />
+    <Compile Include="Code_Library\Params.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI_Library\UI_Forms\frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Library\UI_Forms\frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Library\UI_Forms\frm_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Library\UI_Forms\frm_menu.Designer.cs">
+      <DependentUpon>frm_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Library\UI_Forms\frm_splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Library\UI_Forms\frm_splash.Designer.cs">
+      <DependentUpon>frm_splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Library\UI_User_Controls\uc_accueil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Library\UI_User_Controls\uc_accueil.Designer.cs">
+      <DependentUpon>uc_accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Library\UI_User_Controls\uc_recherche.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Library\UI_User_Controls\uc_recherche.Designer.cs">
+      <DependentUpon>uc_recherche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Library\UI_User_Controls\uc_reports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Library\UI_User_Controls\uc_reports.Designer.cs">
+      <DependentUpon>uc_reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Library\UI_User_Controls\uc_sauvegarde.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Library\UI_User_Controls\uc_sauvegarde.Designer.cs">
+      <DependentUpon>uc_sauvegarde.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Library\UI_User_Controls\uc_users.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Library\UI_User_Controls\uc_users.Designer.cs">
+      <DependentUpon>uc_users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Library\UI_User_Controls\uc_wait.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Library\UI_User_Controls\uc_wait.Designer.cs">
+      <DependentUpon>uc_wait.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI_Library\UI_Forms\frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Library\UI_Forms\frm_menu.resx">
+      <DependentUpon>frm_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Library\UI_Forms\frm_splash.resx">
+      <DependentUpon>frm_splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Library\UI_User_Controls\uc_accueil.resx">
+      <DependentUpon>uc_accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Library\UI_User_Controls\uc_recherche.resx">
+      <DependentUpon>uc_recherche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Library\UI_User_Controls\uc_reports.resx">
+      <DependentUpon>uc_reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Library\UI_User_Controls\uc_sauvegarde.resx">
+      <DependentUpon>uc_sauvegarde.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Library\UI_User_Controls\uc_users.resx">
+      <DependentUpon>uc_users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Library\UI_User_Controls\uc_wait.resx">
+      <DependentUpon>uc_wait.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cb-04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\files-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo_29-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data_backup-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seographic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bars_file-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulb-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xicon-globe-search.png.pagespeed.ic.HMXP17cCWa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database-Backup-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finance-analytics-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weka Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weka Logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weka Logo 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cmu-db-icon-smaller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\162-1628078_street-captains-are-also-in-charge-of-updating-our-database-icon-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-database-clip-art-salmon-5abe3d84d099c4.8894251215224170288544.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
